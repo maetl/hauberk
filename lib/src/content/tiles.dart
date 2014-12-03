@@ -20,6 +20,10 @@ class Tiles {
   static TileType treeAlt1;
   static TileType treeAlt2;
 
+  static TileType sand;
+  static TileType canyon;
+  static TileType mesa;
+
   static void initialize() {
     // Define the tile types.
     Tiles.floor = new TileType("floor", true, true,
@@ -62,6 +66,19 @@ class Tiles {
     Tiles.treeAlt2 = new TileType("tree", false, false, [
       green(CharCode.blackClubSuit, Color.darkGreen),
       darkGreen(CharCode.blackClubSuit)
+    ]);
+
+    Tiles.sand = new TileType("sand", true, true,
+      [gold('.'), darkGold('.')]);
+
+    Tiles.canyon = new TileType("canyon", false, false,[
+      gold(CharCode.HALF_LEFT, Color.DARK_GOLD),
+      darkGold(CharCode.HALF_LEFT)
+    ]);
+
+    Tiles.mesa = new TileType("mesa", false, false,[
+      gold(CharCode.BOX_DRAWINGS_LIGHT_VERTICAL, Color.DARK_GOLD),
+      darkGold(CharCode.BOX_DRAWINGS_LIGHT_VERTICAL)
     ]);
   }
 }

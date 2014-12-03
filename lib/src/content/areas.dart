@@ -7,6 +7,7 @@ import '../engine.dart';
 import 'debug_area.dart';
 import 'drops.dart';
 import 'forest.dart';
+import 'desert.dart';
 import 'items.dart';
 import 'dungeon.dart';
 import 'monsters.dart';
@@ -64,6 +65,15 @@ class Areas {
       rarity(2, 'magic', 2),
       rarity(2, 'equipment', 2)
     ], quest: kill('fox', 1));
+
+    area('Desolate Desert', 64, 64, 4.0);
+    level(() => new Desert(), monsters: 0, items: 6, breeds: [
+      'crow',
+      'lizard guard',
+      'brown bat'
+    ], drop: [
+      rarity(1, 'Rock')
+    ], quest: kill('lizard guard', 1));
 
     area('Training Grounds', 79, 33, 7.0);
     level(() => new TrainingGrounds(), monsters: 40, items: 6, breeds: [
