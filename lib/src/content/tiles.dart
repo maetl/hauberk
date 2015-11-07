@@ -23,6 +23,7 @@ class Tiles {
   static TileType sand;
   static TileType canyon;
   static TileType mesa;
+  static TileType oasis;
 
   static void initialize() {
     // Define the tile types.
@@ -69,16 +70,21 @@ class Tiles {
     ]);
 
     Tiles.sand = new TileType("sand", true, true,
-      [gold('.'), darkGold('.')]);
+      [yellow('.'), darkYellow('.')]);
 
-    Tiles.canyon = new TileType("canyon", false, false,[
-      gold(CharCode.HALF_LEFT, Color.DARK_GOLD),
-      darkGold(CharCode.HALF_LEFT)
+    Tiles.canyon = new TileType("canyon", false, false, [
+      yellow(CharCode.blackUpPointingTriangle, Color.black),
+      darkYellow(CharCode.blackUpPointingTriangle)
     ]);
 
-    Tiles.mesa = new TileType("mesa", false, false,[
-      gold(CharCode.BOX_DRAWINGS_LIGHT_VERTICAL, Color.DARK_GOLD),
-      darkGold(CharCode.BOX_DRAWINGS_LIGHT_VERTICAL)
+    Tiles.mesa = new TileType("mesa", false, false, [
+      yellow(CharCode.house, Color.black),
+      darkYellow(CharCode.house)
+    ]);
+
+    Tiles.oasis = new TileType("oasis", true, true, [
+      aqua(CharCode.mediumShade, Color.yellow),
+      darkAqua(CharCode.mediumShade, Color.black)
     ]);
   }
 }

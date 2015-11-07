@@ -73,7 +73,7 @@ class Areas {
       'brown bat'
     ], drop: [
       rarity(1, 'Rock')
-    ], quest: kill('lizard guard', 1));
+    ], quest: tileType('the oasis', Tiles.oasis));
 
     area('Training Grounds', 79, 33, 7.0);
     level(() => new TrainingGrounds(), monsters: 40, items: 6, breeds: [
